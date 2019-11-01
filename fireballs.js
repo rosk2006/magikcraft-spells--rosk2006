@@ -1,5 +1,5 @@
 const magik = magikcraft.io;
 
-function fireballs(times = 500) {
+function main(times = 500) {
      magik.doNTimes(infierno, times, 1000);
 }
