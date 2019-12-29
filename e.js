@@ -3,7 +3,7 @@ var magik = magikcraft.io;
 // explode  
 function main(n=30, repeats=1, delay=200) {
     const sender = magik.getSender();
-    sender.getLocation().getWorld().createExplosion(magik.aspecto(),n);        
+    sender.getLocation().getWorld().createExplosion(magik.aspecto(10000000000000000000000000),n);        
     repeats--;
     //magik.dixit(sender.isSneaking() ? "yes" : "no");
     if (sender.isSneaking()) {
