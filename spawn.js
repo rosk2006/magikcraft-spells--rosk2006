@@ -2,7 +2,7 @@ var magik = magikcraft.io;
 
 
 
-function spawn(typ, n, times, baseloc){
+function main(typ, n, times, baseloc){
     sender = server.getPlayer(sender.getName());
 	if (typ == '?') {
 		magik.dixit("/cast spawn <typ> <n> <times>");
@@ -49,7 +49,7 @@ function spawn(typ, n, times, baseloc){
         
 }
 
-function create_spawn_point(loc) {
+function main(loc) {
     var block = loc.getBlock();
     var r = 1;
     var depth = 3;
@@ -75,7 +75,7 @@ function create_spawn_point(loc) {
 }
 
 
-function rnd_monster_type() {
+function main() {
     var types = [
         'ZOMBIE',
         'ZOMBIE',
@@ -92,35 +92,35 @@ function rnd_monster_type() {
     return rnd_from_array(types);
 }
 
-function rnd_from_array(arry) {
+function main(arry) {
     return arry[Math.floor(Math.random()*arry.length)];
 
 }
 
 
-function randn_bm() {
+function main() {
     var u = 1 - Math.random(); // Subtraction to flip [0, 1) to (0, 1].
     var v = 1 - Math.random();
     return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
 }
 
 
-function rnorm_unit(count) {
+function main(count) {
     var ret = 0;
     for (var i = 0; i < count; i++) {
         ret += Math.random();
     }
     return ret/count;
 }
-function rnorm(mean, sd) {
+function main(mean, sd) {
     return randn_bm() * sd + mean;
 }
-function runif(from, to) {
+function main(from, to) {
     return scale(Math.random(), from, to);
 }
-function scale(r, from, to) {
+function main(r, from, to) {
     return Math.floor(r*(to - from)+from)
 }
-function rndBlock(loc, radius, height) {
+function main(loc, radius, height) {
     return loc.getBlock().getRelative(rnorm(0, radius/5), runif(0, height), rnorm(0, radius/5));
 }
