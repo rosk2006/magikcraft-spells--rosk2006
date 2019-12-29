@@ -1,6 +1,6 @@
 var magik = magikcraft.io;
 
-function jail(r, typ, force, fire) {
+function main(r, typ, force, fire) {
 		if (r == '?') {
 			magik.dixit("/cast jail <r> <typ> <force> <fire>");
 			magik.dixit("r - radius");
@@ -27,7 +27,7 @@ function jail(r, typ, force, fire) {
         }
     }
 }
-function drawSphere(block, r, typ, force) {
+function main(block, r, typ, force) {
     sphere(block, r, function(block, x,y,z) {
         var doit = false;
         if (force == '1') {
@@ -43,7 +43,7 @@ function drawSphere(block, r, typ, force) {
         }
     });
 }
-function sphere(block, r, fn) {    
+function main(block, r, fn) {    
 
     var max2 = (r+1) * (r+1);
     var min2 = (r-1) * (r-1);
@@ -62,35 +62,35 @@ function sphere(block, r, fn) {
 }
 
 
-function randn_bm() {
+function main() {
     var u = 1 - Math.random(); // Subtraction to flip [0, 1) to (0, 1].
     var v = 1 - Math.random();
     return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
 }
 
 
-function rnorm_unit(count) {
+function main(count) {
     var ret = 0;
     for (var i = 0; i < count; i++) {
         ret += Math.random();
     }
     return ret/count;
 }
-function rnorm(mean, sd) {
+function main(mean, sd) {
     return randn_bm() * sd + mean;
 }
-function runif(from, to) {
+function main(from, to) {
     return scale(Math.random(), from, to);
 }
-function scale(r, from, to) {
+function main(r, from, to) {
     return Math.floor(r*(to - from)+from)
 }
-function rndBlock(loc, radius, height) {
+function main(loc, radius, height) {
     return loc.getBlock().getRelative(rnorm(0, radius/5), runif(0, height), rnorm(0, radius/5));
 }
 var magik = magikcraft.io;
 
-function jail(r, typ, force, fire) {
+function main(r, typ, force, fire) {
 		if (r == '?') {
 			magik.dixit("/cast jail <r> <typ> <force> <fire>");
 			magik.dixit("r - radius");
@@ -117,7 +117,7 @@ function jail(r, typ, force, fire) {
         }
     }
 }
-function drawSphere(block, r, typ, force) {
+function main(block, r, typ, force) {
     sphere(block, r, function(block, x,y,z) {
         var doit = false;
         if (force == '1') {
@@ -133,7 +133,7 @@ function drawSphere(block, r, typ, force) {
         }
     });
 }
-function sphere(block, r, fn) {    
+function main(block, r, fn) {    
 
     var max2 = (r+1) * (r+1);
     var min2 = (r-1) * (r-1);
@@ -152,29 +152,29 @@ function sphere(block, r, fn) {
 }
 
 
-function randn_bm() {
+function main() {
     var u = 1 - Math.random(); // Subtraction to flip [0, 1) to (0, 1].
     var v = 1 - Math.random();
     return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
 }
 
 
-function rnorm_unit(count) {
+function main(count) {
     var ret = 0;
     for (var i = 0; i < count; i++) {
         ret += Math.random();
     }
     return ret/count;
 }
-function rnorm(mean, sd) {
+function main(mean, sd) {
     return randn_bm() * sd + mean;
 }
-function runif(from, to) {
+function main(from, to) {
     return scale(Math.random(), from, to);
 }
-function scale(r, from, to) {
+function main(r, from, to) {
     return Math.floor(r*(to - from)+from)
 }
-function rndBlock(loc, radius, height) {
+function main(loc, radius, height) {
     return loc.getBlock().getRelative(rnorm(0, radius/5), runif(0, height), rnorm(0, radius/5));
 }
