@@ -1,5 +1,5 @@
 const magik = magikcraft.io;
 
-function toss(player) {
+function main(player) {
 magik.iacta(player)
 }
