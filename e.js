@@ -1,7 +1,7 @@
 var magik = magikcraft.io;
 
 // explode  
-function e(n=30, repeats=1, delay=200) {
+function main(n=30, repeats=1, delay=200) {
     const sender = magik.getSender();
     sender.getLocation().getWorld().createExplosion(magik.aspecto(),n);        
     repeats--;
