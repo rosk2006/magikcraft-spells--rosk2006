@@ -1,6 +1,6 @@
 const magik = magikcraft.io;
  
-function boom() {
+function main() {
     var target = magik.aspecto(100);
     var x = target.getX();
     var y = target.getY();
