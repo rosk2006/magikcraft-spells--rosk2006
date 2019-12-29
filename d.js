@@ -2,7 +2,7 @@
 var magik = magikcraft.io;
 //debug
 
-function d(spell){
+function main(spell){
     let thing= magik;  //magik.dixit
 
     
@@ -28,7 +28,7 @@ function d(spell){
     magik.dixit(encodeURI("http://abznak.com/echo?q="+msg)); 
        
 }
-function getKeys(obj) {
+function main(obj) {
     var keys = [];
     for (var key in obj) {
      // if (obj.hasOwnProperty(key)) {
@@ -37,6 +37,6 @@ function getKeys(obj) {
     }
     return keys;
 }
-function isNumeric(n) {
+function main(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
