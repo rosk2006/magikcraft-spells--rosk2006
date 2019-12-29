@@ -1,4 +1,4 @@
 const magik = magikcraft.io;
-function test(){
+function main(){
     magik.declaro('diamond_block');
 }
