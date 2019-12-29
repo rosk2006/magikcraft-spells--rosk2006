@@ -1,6 +1,6 @@
 const magik = magikcraft.io;
 
-function blink() {
+function main() {
      const there = magik.aspecto();
      magik.ianuae(there);
 }
