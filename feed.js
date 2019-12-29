@@ -1,4 +1,4 @@
 const magik = magikcraft.io;
-function feed(playerName) {
+function main(playerName) {
     magik.satio(playerName);
 }
