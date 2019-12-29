@@ -1,4 +1,4 @@
 const magik = magikcraft.io;
-function wings(){
+function main(){
     magik.declaro('elytra');
 }
