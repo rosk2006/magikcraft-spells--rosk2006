@@ -1,6 +1,6 @@
 const magik = magikcraft.io;
 
-function l() {
+function main() {
     const Material = magik.type('Material');
     const looking = magik.aspecto();
     const world = magik.getSender().getWorld();
@@ -37,7 +37,7 @@ function l() {
     const y = looking.getY();
     const z = looking.getZ();
 
-    function blast(X, Z) {
+    function main(X, Z) {
         const location = looking;
         location.setX(X + Math.random() * 10 - 5);
         location.setZ(Z + Math.random() * 10 - 5);
